@@ -15,7 +15,7 @@ module.exports = {
         { "Name": "Caesar salad", "Price": 9 },
         { "Name": "Grilled Salmon with Mashed Potatoes", "Price": 20 }
     ],
-    // Takes account users minimum and maximum budget and finds food items that meet the budget range
+    // Takes account users minimum and maximum budget and finds food items that meet the budget range key: int value
     minmaxbudget(MinimumBudget, Maximumbudget) {
         const result = this.FoodItems.filter(item => item.Price >= MinimumBudget && item.Price <= Maximumbudget);
         console.log(result);   
@@ -33,23 +33,40 @@ module.exports = {
         { "Name": "Martini", "Price": 24, "alocoholic": "Yes" },
         { "Name": "Wine", "Price": 23, "alocoholic": "Yes" }
     ],
-
+    //Seperates alcohlic and non-alcoholic beverages by using key: string value 
     NonAlcoholicList(){
         const nonAlcoholicDrinks = [];
         const AlcoholicDrinks = [];
         for (const item of this.DrinkItems){
-            if (item.alocoholic === "No"){
+            if (item.alocoholic == "No"){
                 nonAlcoholicDrinks.push(" " + item.Name );
             }
-            else if (item.alocoholic === "Yes"){
+            else if (item.alocoholic == "Yes"){
                 AlcoholicDrinks.push(" " + item.Name);
             }
         }
         return console.log("These are the non-Alcoholic drinks\n" + nonAlcoholicDrinks + "\n\nThese are the Alcoholic drinks\n" + AlcoholicDrinks);
         
+    },
+    //Allows users to send Name, Email and feedback and store it within an array as json objects
+    GiveFeedback(Name, Email, Feedback, password = ""){
+        ListOfFeedbacks = []
+        if (password != "P@ssw0rd!" || password == "")
+            {
+                
+                let Json = {"Name" : Name, "Email": Email, "Feedback":Feedback};
+                ListOfFeedbacks.push(Json);
+            }
+        console.log(ListOfFeedbacks);
     }
+
 }
 
 module.exports.calculateTotalBill(100,9,10,40);
 module.exports.minmaxbudget(10,15);
 module.exports.NonAlcoholicList();
+module.exports.GiveFeedback("Malcolm", "221737Y@mymail.nyp.edu.sg", "The food tasted like it was made with love");
+module.exports.GiveFeedback("Darren", "D4rren@gmail.com", "I didn't like the food");
+module.exports.GiveFeedback("Russell", "Ruzzel@gmail.com", "Amazing variety of drinks!");
+module.exports.GiveFeedback("Darren", "D4rren@gmail.com", "I didn't like the food", "P@ssw0rd!");
+// console.log(module.exports.ListOfFeedbacks);
