@@ -4,7 +4,7 @@ module.exports = {
     calculateTotalBill(amount, GSTrate, ServiceCharge, tips) {
 
         if (typeof amount !== 'number' || typeof GSTrate !== 'number' || typeof ServiceCharge !== 'number' || typeof tips !== 'number') {
-            console.log("Invalid input. All arguments must be of type 'number'.");
+            console.log("Please only enter numbers");
             return;
         }
         else{
