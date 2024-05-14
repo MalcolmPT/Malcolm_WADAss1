@@ -1,13 +1,23 @@
+let ListOfFeedbacks = []
 module.exports = {
     // Takes in the total cost and adds GST, Service charge, and tips chronologically
     calculateTotalBill(amount, GSTrate, ServiceCharge, tips) {
-        const AfterServiceCharge = amount * ((ServiceCharge + 100 )/ 100);
-        const AfterGST = AfterServiceCharge * ((GSTrate + 100)/ 100);
-        const Total = tips + AfterGST;
-        let formattednum = Total.toFixed(2);
-        console.log("Total Cost: $" + formattednum);
+
+        if (typeof amount !== 'number' || typeof GSTrate !== 'number' || typeof ServiceCharge !== 'number' || typeof tips !== 'number') {
+            console.log("Invalid input. All arguments must be of type 'number'.");
+            return;
+        }
+        else{
+            const AfterServiceCharge = amount * ((ServiceCharge + 100 )/ 100);
+            const AfterGST = AfterServiceCharge * ((GSTrate + 100)/ 100);
+            const Total = tips + AfterGST;
+            let formattednum = Total.toFixed(2);
+            console.log("Total Cost: $" + formattednum);
+        }
+
         
-},
+        
+    },
     //this is food menu
     FoodItems: [
         { "Name": "Truffle Fries", "Price": 4 },
@@ -59,16 +69,28 @@ module.exports = {
         return console.log("These are the non-Alcoholic drinks\n" + nonAlcoholicDrinks + "\n\nThese are the Alcoholic drinks\n" + AlcoholicDrinks);
         
     },
+    
     //Allows users to send Name, Email and feedback and store it within an array as json objects Feedbacks can be accessed with a password(Clearance)
     GiveFeedback(Name, Email, Feedback, password = ""){
-        ListOfFeedbacks = []
-        if (password != "P@ssw0rd!" || password == "")
-            {
-                
-                let Json = {"Name" : Name, "Email": Email, "Feedback":Feedback};
-                ListOfFeedbacks.push(Json);
+        var emailRegex = /\S+@\S+\.\S+/;
+        
+        if (emailRegex.test(Email)){
+            if (password != "P@ssw0rd!" || password == "")
+                {
+                    
+                    let Json = {"Name" : Name, "Email": Email, "Feedback":Feedback};
+                    ListOfFeedbacks.push(Json);
+                    console.log("Successfully added");
+                }
+            else{
+                console.log(ListOfFeedbacks);
             }
-        console.log(ListOfFeedbacks);
+        }
+        else{
+            console.log("Please enter correct email format");
+        }
+       
+        
     },
     //Chooses a random cocktail for the customer
     CocktailParty(){
@@ -81,11 +103,12 @@ module.exports = {
 }
 
 module.exports.calculateTotalBill(100,9,10,40);
+module.exports.calculateTotalBill("Not a number",9,10,40);
 module.exports.minmaxbudget(20,25);
 module.exports.NonAlcoholicList();
 module.exports.GiveFeedback("Malcolm",  "221737Y@mymail.nyp.edu.sg", "The food tasted like it was made with love");
 module.exports.GiveFeedback("Darren", "D4rren@gmail.com", "I didn't like the food");
-module.exports.GiveFeedback("Russell", "Ruzzel@gmail.com", "Amazing variety of drinks!");
+module.exports.GiveFeedback("Russell", "fakeemail.com", "Amazing variety of drinks!");
 module.exports.GiveFeedback("Darren", "D4rren@gmail.com", "I didn't like the food", "P@ssw0rd!");
 module.exports.CocktailParty();
 // console.log(module.exports.ListOfFeedbacks);
