@@ -16,23 +16,23 @@ nodemon app.js
 
 # Usage
 
-//Make sure to always have this (you can change according to your file location)
+   Make sure to always have this (you can change according to your file location)
 - const services = require('./Malcolm_CustomerService.js');
-
-//Calculate the bill after service tax & GST
+8 
+  Calculate the bill after service tax & GST
 - calculateTotalBill(100,9,10,40);
 
-//Show food items that meet these price ranges
+  Show food items that meet these price ranges
 - module.exports.minmaxbudget(20,25);
 
-//List out all the alcoholic drinks
+  List out all the alcoholic drinks
 - module.exports.NonAlcoholicList();
 
-//This command allows users to send their feedback about the food. The feedback can also be accessed with a key (the password)
-module.exports.GiveFeedback("Malcolm",  "221737Y@mymail.nyp.edu.sg", "The food tasted like it was made with love");
-module.exports.GiveFeedback("Darren", "D4rren@gmail.com", "I didn't like the food", "P@ssw0rd!");
+  This command allows users to send their feedback about the food. The feedback can also be accessed with a key (the password)
+- module.exports.GiveFeedback("Malcolm",  "221737Y@mymail.nyp.edu.sg", "The food tasted like it was made with love");
+- module.exports.GiveFeedback("Darren", "D4rren@gmail.com", "I didn't like the food", "P@ssw0rd!");
 
-//Gives a random cocktail for the user to order
+  Gives a random cocktail for the user to order
 - module.exports.CocktailParty();
 
 # Notes
