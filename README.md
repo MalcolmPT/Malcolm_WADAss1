@@ -39,6 +39,8 @@ service.NonAlcoholicList();
 //Sends feedback and also show feedback(s) inputted into the list
 service.GiveFeedback("Malcolm",  "221737Y@mymail.nyp.edu.sg", "The food tasted like it was made with love");
 service.GiveFeedback("Malcolm", "221737Y@gmail.com", "I didn't like the food", "P@ssw0rd!");
+
+//Chooses a random cocktail lol
 service.CocktailParty();
 ```
 # Notes
