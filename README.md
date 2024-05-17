@@ -22,23 +22,24 @@ To use this module in your Node.js project, follow these steps:
 
 # Usage
 There are the functions in the module:
+
 ```js
 //Required to run the module
 const service = require('./Malcolm_CustomerService.js');
 
 //Calculates the bill (cost, gst, service charge, tips)
-module.exports.calculateTotalBill(100,9,10,5);
+service.calculateTotalBill(100,9,10,5);
 
 //Shows Items on the menu that meet the price range of $20-$25
-module.exports.minmaxbudget(20,25);
+service.minmaxbudget(20,25);
 
 //Shows which drinks are alcoholic and non-alcoholic
-module.exports.NonAlcoholicList();
+service.NonAlcoholicList();
 
 //Sends feedback and also show feedback(s) inputted into the list
-module.exports.GiveFeedback("Malcolm",  "221737Y@mymail.nyp.edu.sg", "The food tasted like it was made with love");
-module.exports.GiveFeedback("Malcolm", "221737Y@gmail.com", "I didn't like the food", "P@ssw0rd!");
-module.exports.CocktailParty();
+service.GiveFeedback("Malcolm",  "221737Y@mymail.nyp.edu.sg", "The food tasted like it was made with love");
+service.GiveFeedback("Malcolm", "221737Y@gmail.com", "I didn't like the food", "P@ssw0rd!");
+service.CocktailParty();
 ```
 # Notes
 
