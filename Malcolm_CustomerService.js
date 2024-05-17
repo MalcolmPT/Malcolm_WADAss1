@@ -1,5 +1,6 @@
 let ListOfFeedbacks = []
 cocktails = ["Mojito", "Bloody Mary", "Piña Colada", "Martini", "Margarita"];
+pw = "P@ssw0rd!"
 
 module.exports = {
     // Takes in the total cost and adds GST, Service charge, and tips chronologically
@@ -77,7 +78,7 @@ module.exports = {
         var emailRegex = /\S+@\S+\.\S+/;
         
         if (emailRegex.test(Email)){
-            if (password != "P@ssw0rd!" || password == "")
+            if (password != pw || password == "")
                 {
                     
                     let Json = {"Name" : Name, "Email": Email, "Feedback":Feedback};
