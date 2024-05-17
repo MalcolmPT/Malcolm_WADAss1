@@ -21,7 +21,7 @@ To use this module in your Node.js project, follow these steps:
     ```
 
 # Usage
-
+There are the functions in the module:
 ```js
 //Required to run the module
 const service = require('./Malcolm_CustomerService.js');
