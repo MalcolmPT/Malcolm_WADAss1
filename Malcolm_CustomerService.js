@@ -19,7 +19,7 @@ module.exports = {
         
     },
     //this is food menu
-    FoodItems: [
+    Menu: [
         { "Name": "Truffle Fries", "Price": 4 },
         { "Name": "Fettuccine Alfredo", "Price": 12 },
         { "Name": "Wagyu Steak ", "Price": 22 },
@@ -42,7 +42,7 @@ module.exports = {
     // Takes account users minimum and maximum budget and finds food items that meet the budget range key: int value
     minmaxbudget(MinimumBudget, Maximumbudget) {
         
-        const result = this.FoodItems.filter(item => item.Price >= MinimumBudget && item.Price <= Maximumbudget);
+        const result = this.Menu.filter(item => item.Price >= MinimumBudget && item.Price <= Maximumbudget);
         for (const item of result){
             const x = [];
             const y = [];
@@ -58,7 +58,7 @@ module.exports = {
     NonAlcoholicList(){
         const nonAlcoholicDrinks = [];
         const AlcoholicDrinks = [];
-        for (const item of this.FoodItems){
+        for (const item of this.Menu){
             if (item.alocoholic == "No"){
                 nonAlcoholicDrinks.push(" " + item.Name );
             }

@@ -22,25 +22,24 @@ To use this module in your Node.js project, follow these steps:
 
 # Usage
 
-   Make sure to always have this (you can change according to your file location)
-- const services = require('./Malcolm_CustomerService.js');
-8 
-  Calculate the bill after service tax & GST
-- calculateTotalBill(100,9,10,40);
+```js
+//Required to run the module
+const service = require('./Malcolm_CustomerService.js');
 
-  Show food items that meet these price ranges
-- module.exports.minmaxbudget(20,25);
+//Calculates the bill (cost, gst, service charge, tips)
+module.exports.calculateTotalBill(100,9,10,5);
 
-  List out all the alcoholic drinks
-- module.exports.NonAlcoholicList();
+//Shows Items on the menu that meet the price range of $20-$25
+module.exports.minmaxbudget(20,25);
 
-  This command allows users to send their feedback about the food. The feedback can also be accessed with a key (the password)
-- module.exports.GiveFeedback("Malcolm",  "221737Y@mymail.nyp.edu.sg", "The food tasted like it was made with love");
-- module.exports.GiveFeedback("Darren", "D4rren@gmail.com", "I didn't like the food", "P@ssw0rd!");
+//Shows which drinks are alcoholic and non-alcoholic
+module.exports.NonAlcoholicList();
 
-  Gives a random cocktail for the user to order
-- module.exports.CocktailParty();
-
+//Sends feedback and also show feedback(s) inputted into the list
+module.exports.GiveFeedback("Malcolm",  "221737Y@mymail.nyp.edu.sg", "The food tasted like it was made with love");
+module.exports.GiveFeedback("Malcolm", "221737Y@gmail.com", "I didn't like the food", "P@ssw0rd!");
+module.exports.CocktailParty();
+```
 # Notes
 
 - Within the Malcolm_CustomerService.js file you can find the menu which is a json object labeled "FoodItems"
