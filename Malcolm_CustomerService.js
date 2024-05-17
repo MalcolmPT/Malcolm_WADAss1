@@ -1,5 +1,6 @@
 let ListOfFeedbacks = []
 cocktails = ["Mojito", "Bloody Mary", "Piña Colada", "Martini", "Margarita"];
+
 module.exports = {
     // Takes in the total cost and adds GST, Service charge, and tips chronologically
     calculateTotalBill(amount, GSTrate, ServiceCharge, tips) {

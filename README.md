@@ -45,5 +45,5 @@ service.CocktailParty();
 ```
 # Notes
 
-- Within the Malcolm_CustomerService.js file you can find the menu which is a json object labeled "FoodItems"
-- The random cocktails need to be changed withtin the function if you wish to change the items
+- Within the `Malcolm_CustomerService.js` file you can find and edit the menu which is a json object labeled "Menu"
+- The random cocktails can be edited on Line 2 of `Malcolm_CustomerService.js`
