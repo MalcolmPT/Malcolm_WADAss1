@@ -10,10 +10,12 @@ To use this module in your Node.js project, follow these steps:
 2. Save the `Malcolm_CustomerService.js` file in your project directory.
 3. Create a new file javascript file to use the API
 4. In the created file, insert the code below to import the module using the correct file path
+
     ```js
     const service = require('./Malcolm_CustomerService.js');
     ```
 5. To execute the module, run the command below in your terminal:
+
     ```js
     nodemon app.js
     ```
