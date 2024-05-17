@@ -7,12 +7,12 @@ The is a Node.js module that provides customer services by performing various fu
 To use this module in your Node.js project, follow these steps:
 
 1. Install Node.js if you don't have it already, download and install Node.js from https://nodejs.org/.
-2. Save the Malcolm_CustomerService.js file in your project directory.
+2. Save the `Malcolm_CustomerService.js` file in your project directory.
 3. Create a new file javascript file to use the API
 4. In the created file, insert the code below to import the module using the correct file path
 ```
 const service = require('./Malcolm_CustomerService.js');
-```
+```js
 5. To execute the module and any of the functions, run the following command in your terminal:
 nodemon app.js
 
