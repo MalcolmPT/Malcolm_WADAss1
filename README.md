@@ -45,6 +45,9 @@ service.CocktailParty();
 ```
 # Notes
 
-- Within the `Malcolm_CustomerService.js` file you can find and edit the menu which is a json object labeled "Menu" //Affects NonAlcoholicList() & minmaxbudget(MinimumBudget, Maximumbudget)
-- The random cocktails can be edited on Line 2 of `Malcolm_CustomerService.js`  //Affects CocktailParty()
-- The password can be edited on Line 3 of `Malcolm_CustomerService.js`  //Affects GiveFeedback(Name, Email, Feedback, password = "")
+- Within the `Malcolm_CustomerService.js` file you can find and edit the menu which is a json object labeled "Menu" 
+    //Affects NonAlcoholicList() & minmaxbudget(MinimumBudget, Maximumbudget)
+- The random cocktails can be edited on Line 2 of `Malcolm_CustomerService.js`  
+    //Affects CocktailParty()
+- The password can be edited on Line 3 of `Malcolm_CustomerService.js`  
+    //Affects GiveFeedback(Name, Email, Feedback, password = "")
