@@ -103,14 +103,3 @@ module.exports = {
 
     
 }
-
-module.exports.calculateTotalBill(100,9,10,40);
-module.exports.calculateTotalBill("Not a number",9,10,40);
-module.exports.minmaxbudget(20,25);
-module.exports.NonAlcoholicList();
-module.exports.GiveFeedback("Malcolm",  "221737Y@mymail.nyp.edu.sg", "The food tasted like it was made with love");
-module.exports.GiveFeedback("Darren", "D4rren@gmail.com", "I didn't like the food");
-module.exports.GiveFeedback("Russell", "fakeemail.com", "Amazing variety of drinks!");
-module.exports.GiveFeedback("Darren", "D4rren@gmail.com", "I didn't like the food", "P@ssw0rd!");
-module.exports.CocktailParty();
-// console.log(module.exports.ListOfFeedbacks);
