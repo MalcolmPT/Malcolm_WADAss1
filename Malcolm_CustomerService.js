@@ -1,4 +1,5 @@
 let ListOfFeedbacks = []
+cocktails = ["Mojito", "Bloody Mary", "Piña Colada", "Martini", "Margarita"];
 module.exports = {
     // Takes in the total cost and adds GST, Service charge, and tips chronologically
     calculateTotalBill(amount, GSTrate, ServiceCharge, tips) {
@@ -94,7 +95,6 @@ module.exports = {
     },
     //Chooses a random cocktail for the customer
     CocktailParty(){
-        const cocktails = ["Mojito", "Bloody Mary", "Piña Colada", "Martini", "Margarita"];
         const randomIndex = Math.floor(Math.random() * cocktails.length);
         console.log(cocktails[randomIndex]);
     }
