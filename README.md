@@ -1,16 +1,18 @@
-## Customer Service App
+# Customer Service App
 
 The is a Node.js module that provides customer services by performing various functions such as calculating the bill after tax, finding food and drinks that meet a price range set by the customer, categorising alcoholic and non-alcoholic drinks, the ability to send feedbacks as a customer and a randon cocktail selector for recreational activities
 
-# Setting up
+## Setting up
 
 To use this module in your Node.js project, follow these steps:
 
 1. Install Node.js if you don't have it already, download and install Node.js from https://nodejs.org/.
 2. Save the Malcolm_CustomerService.js file in your project directory.
-3. Create a new file named app.js
-4. In app.js, insert the code below to import the module using the correct file path
+3. Create a new file javascript file to use the API
+4. In the created file, insert the code below to import the module using the correct file path
+```
 const service = require('./Malcolm_CustomerService.js');
+```
 5. To execute the module and any of the functions, run the following command in your terminal:
 nodemon app.js
 
