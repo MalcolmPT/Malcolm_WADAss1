@@ -1,6 +1,6 @@
 # Customer Service App
 
-The is a Node.js module that provides customer services by performing various functions such as calculating the bill after tax, finding food and drinks that meet a price range set by the customer, categorising alcoholic and non-alcoholic drinks, the ability to send feedbacks as a customer and a randon cocktail selector for recreational activities
+The is a Node.js module that provides customer services such as calculating the bill after tax, finding food and drinks that meet a price range set by the customer, categorising alcoholic and non-alcoholic drinks, the ability to send feedbacks as a customer and a randon cocktail selector for recreational activities
 
 ## Setting up
 
